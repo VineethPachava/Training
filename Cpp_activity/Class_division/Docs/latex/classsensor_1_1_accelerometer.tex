@@ -1,0 +1,149 @@
+\hypertarget{classsensor_1_1_accelerometer}{}\section{sensor\+:\+:Accelerometer Class Reference}
+\label{classsensor_1_1_accelerometer}\index{sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}}
+
+
+{\ttfamily \#include $<$accelerometer.\+h$>$}
+
+
+
+Inheritance diagram for sensor\+:\+:Accelerometer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classsensor_1_1_accelerometer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sensor\+:\+:Accelerometer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classsensor_1_1_accelerometer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsensor_1_1_accelerometer_a6615c08a2b256bd1e1f2ddc09e9337cb}{Accelerometer} ()
+\item 
+\hyperlink{classsensor_1_1_accelerometer_a375d0a6727812144705808e10039cba2}{Accelerometer} (double x, double y, double z)
+\item 
+\hyperlink{classsensor_1_1_accelerometer_a03b06044198fcb5c39f9b83c471c5fd2}{$\sim$\+Accelerometer} ()
+\item 
+std\+::vector$<$ double $>$ \hyperlink{classsensor_1_1_accelerometer_a53257e59c7db9c75f3df41039d5b5b6d}{linear\+\_\+acceleration} (double gyro\+\_\+yaw, double gyro\+\_\+pitch, double gyro\+\_\+roll)
+\item 
+virtual void \hyperlink{classsensor_1_1_accelerometer_a172c1bfe5d20071d5f3542a717797afa}{print\+\_\+raw} ()
+\item 
+double \hyperlink{classsensor_1_1_accelerometer_afd2bf373d1142b305cc16c9020ae01e8}{pitch} ()
+\item 
+double \hyperlink{classsensor_1_1_accelerometer_a63e28e79c1b08471c86f163033b04c5d}{roll} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \hyperlink{classsensor_1_1_accelerometer_af6581f59b9f71cabfa36a46d177deb5f}{Roll\+Pitch\+Yaw} (\hyperlink{classsensor_1_1_accelerometer}{Accelerometer} \&, \hyperlink{classsensor_1_1_magnetometer}{Magnetometer} \&)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 15 of file accelerometer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsensor_1_1_accelerometer_a6615c08a2b256bd1e1f2ddc09e9337cb}\label{classsensor_1_1_accelerometer_a6615c08a2b256bd1e1f2ddc09e9337cb}} 
+\index{sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}!Accelerometer@{Accelerometer}}
+\index{Accelerometer@{Accelerometer}!sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}}
+\subsubsection{\texorpdfstring{Accelerometer()}{Accelerometer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sensor\+::\+Accelerometer\+::\+Accelerometer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file accelerometer.\+cpp.
+
+\mbox{\Hypertarget{classsensor_1_1_accelerometer_a375d0a6727812144705808e10039cba2}\label{classsensor_1_1_accelerometer_a375d0a6727812144705808e10039cba2}} 
+\index{sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}!Accelerometer@{Accelerometer}}
+\index{Accelerometer@{Accelerometer}!sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}}
+\subsubsection{\texorpdfstring{Accelerometer()}{Accelerometer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sensor\+::\+Accelerometer\+::\+Accelerometer (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file accelerometer.\+cpp.
+
+\mbox{\Hypertarget{classsensor_1_1_accelerometer_a03b06044198fcb5c39f9b83c471c5fd2}\label{classsensor_1_1_accelerometer_a03b06044198fcb5c39f9b83c471c5fd2}} 
+\index{sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}!````~Accelerometer@{$\sim$\+Accelerometer}}
+\index{````~Accelerometer@{$\sim$\+Accelerometer}!sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}}
+\subsubsection{\texorpdfstring{$\sim$\+Accelerometer()}{~Accelerometer()}}
+{\footnotesize\ttfamily sensor\+::\+Accelerometer\+::$\sim$\+Accelerometer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file accelerometer.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsensor_1_1_accelerometer_a53257e59c7db9c75f3df41039d5b5b6d}\label{classsensor_1_1_accelerometer_a53257e59c7db9c75f3df41039d5b5b6d}} 
+\index{sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}!linear\+\_\+acceleration@{linear\+\_\+acceleration}}
+\index{linear\+\_\+acceleration@{linear\+\_\+acceleration}!sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}}
+\subsubsection{\texorpdfstring{linear\+\_\+acceleration()}{linear\_acceleration()}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ sensor\+::\+Accelerometer\+::linear\+\_\+acceleration (\begin{DoxyParamCaption}\item[{double}]{gyro\+\_\+yaw,  }\item[{double}]{gyro\+\_\+pitch,  }\item[{double}]{gyro\+\_\+roll }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classsensor_1_1_accelerometer_afd2bf373d1142b305cc16c9020ae01e8}\label{classsensor_1_1_accelerometer_afd2bf373d1142b305cc16c9020ae01e8}} 
+\index{sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}!pitch@{pitch}}
+\index{pitch@{pitch}!sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}}
+\subsubsection{\texorpdfstring{pitch()}{pitch()}}
+{\footnotesize\ttfamily double sensor\+::\+Accelerometer\+::pitch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file accelerometer.\+cpp.
+
+\mbox{\Hypertarget{classsensor_1_1_accelerometer_a172c1bfe5d20071d5f3542a717797afa}\label{classsensor_1_1_accelerometer_a172c1bfe5d20071d5f3542a717797afa}} 
+\index{sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}!print\+\_\+raw@{print\+\_\+raw}}
+\index{print\+\_\+raw@{print\+\_\+raw}!sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}}
+\subsubsection{\texorpdfstring{print\+\_\+raw()}{print\_raw()}}
+{\footnotesize\ttfamily void sensor\+::\+Accelerometer\+::print\+\_\+raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{class_sensor_a6f16371eb71419f49ea1363ca81d0755}{Sensor}.
+
+
+
+Definition at line 36 of file accelerometer.\+cpp.
+
+\mbox{\Hypertarget{classsensor_1_1_accelerometer_a63e28e79c1b08471c86f163033b04c5d}\label{classsensor_1_1_accelerometer_a63e28e79c1b08471c86f163033b04c5d}} 
+\index{sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}!roll@{roll}}
+\index{roll@{roll}!sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}}
+\subsubsection{\texorpdfstring{roll()}{roll()}}
+{\footnotesize\ttfamily double sensor\+::\+Accelerometer\+::roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 52 of file accelerometer.\+cpp.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classsensor_1_1_accelerometer_af6581f59b9f71cabfa36a46d177deb5f}\label{classsensor_1_1_accelerometer_af6581f59b9f71cabfa36a46d177deb5f}} 
+\index{sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}!Roll\+Pitch\+Yaw@{Roll\+Pitch\+Yaw}}
+\index{Roll\+Pitch\+Yaw@{Roll\+Pitch\+Yaw}!sensor\+::\+Accelerometer@{sensor\+::\+Accelerometer}}
+\subsubsection{\texorpdfstring{Roll\+Pitch\+Yaw}{RollPitchYaw}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Roll\+Pitch\+Yaw (\begin{DoxyParamCaption}\item[{\hyperlink{classsensor_1_1_accelerometer}{Accelerometer} \&}]{obj\+\_\+acc,  }\item[{\hyperlink{classsensor_1_1_magnetometer}{Magnetometer} \&}]{obj\+\_\+mag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 4 of file functions.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{accelerometer_8h}{accelerometer.\+h}\item 
+src/\hyperlink{accelerometer_8cpp}{accelerometer.\+cpp}\end{DoxyCompactItemize}

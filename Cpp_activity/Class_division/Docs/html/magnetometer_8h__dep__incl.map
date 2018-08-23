@@ -1,0 +1,8 @@
+<map id="include/magnetometer.h" name="include/magnetometer.h">
+<area shape="rect" id="node2" href="$accelerometer_8h.html" title="include/accelerometer.h" alt="" coords="191,80,351,107"/>
+<area shape="rect" id="node3" href="$functions_8h.html" title="include/functions.h" alt="" coords="17,155,148,181"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="153,229,250,256"/>
+<area shape="rect" id="node7" href="$magnetometer_8cpp.html" title="src/magnetometer.cpp" alt="" coords="449,80,601,107"/>
+<area shape="rect" id="node6" href="$accelerometer_8cpp.html" title="src/accelerometer.cpp" alt="" coords="223,155,374,181"/>
+<area shape="rect" id="node4" href="$functions_8cpp.html" title="src/functions.cpp" alt="" coords="5,229,128,256"/>
+</map>

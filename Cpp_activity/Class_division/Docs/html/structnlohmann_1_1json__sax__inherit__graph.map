@@ -1,0 +1,5 @@
+<map id="nlohmann::json_sax&lt; BasicJsonType &gt;" name="nlohmann::json_sax&lt; BasicJsonType &gt;">
+<area shape="rect" id="node2" href="$classnlohmann_1_1detail_1_1json__sax__acceptor.html" title="nlohmann::detail::json\l_sax_acceptor\&lt; BasicJsonType \&gt;" alt="" coords="201,5,422,47"/>
+<area shape="rect" id="node3" href="$classnlohmann_1_1detail_1_1json__sax__dom__callback__parser.html" title="nlohmann::detail::json\l_sax_dom_callback_parser\l\&lt; BasicJsonType \&gt;" alt="" coords="221,71,401,127"/>
+<area shape="rect" id="node4" href="$classnlohmann_1_1detail_1_1json__sax__dom__parser.html" title="SAX implementation to create a JSON value from SAX events. " alt="" coords="192,152,431,193"/>
+</map>

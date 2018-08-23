@@ -1,0 +1,7 @@
+<map id="src/main.cpp" name="src/main.cpp">
+<area shape="rect" id="node4" href="$sensor_8h.html" title="include/sensor.h" alt="" coords="669,304,787,331"/>
+<area shape="rect" id="node6" href="$accelerometer_8h.html" title="include/accelerometer.h" alt="" coords="413,155,573,181"/>
+<area shape="rect" id="node9" href="$magnetometer_8h.html" title="magnetometer.h" alt="" coords="299,229,415,256"/>
+<area shape="rect" id="node10" href="$functions_8h.html" title="include/functions.h" alt="" coords="199,80,329,107"/>
+<area shape="rect" id="node11" href="$gps_8h.html" title="include/gps.h" alt="" coords="592,229,691,256"/>
+</map>

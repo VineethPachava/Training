@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - coverage.info - /home/kpit/KPIT_Training/Cpp_activity/Class_division/src/functions.cpp</title>
+  <link rel="stylesheet" type="text/css" href="../../../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../../../index.html">top level</a> - <a href="index.html">home/kpit/KPIT_Training/Cpp_activity/Class_division/src</a> - functions.cpp<span style="font-size: 80%;"> (source / <a href="functions.cpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">coverage.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2018-08-22 17:57:03</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr><td><img src="../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #include &quot;include/functions.h&quot;</a>
+<a name="2"><span class="lineNum">       2 </span>            : </a>
+<span class="lineNum">       3 </span>            : namespace sensor{
+<span class="lineNum">       4 </span><span class="lineCov">          8 : std::vector&lt;double&gt;RollPitchYaw(Accelerometer&amp; obj_acc, Magnetometer&amp; obj_mag){</span>
+<span class="lineNum">       5 </span><span class="lineCov">          8 :    std::vector&lt;double&gt; orient;</span>
+<span class="lineNum">       6 </span>            :    double pitch;
+<span class="lineNum">       7 </span>            :    double roll;
+<span class="lineNum">       8 </span>            :    double yaw;
+<span class="lineNum">       9 </span>            :    double y_val;
+<span class="lineNum">      10 </span>            :    double x_val;
+<span class="lineNum">      11 </span>            : 
+<span class="lineNum">      12 </span><span class="lineCov">          8 :    pitch = obj_acc.pitch();</span>
+<span class="lineNum">      13 </span><span class="lineCov">          8 :    roll = obj_acc.roll();</span>
+<span class="lineNum">      14 </span><span class="lineCov">          8 :     x_val = obj_mag.mag_x*cos(pitch) + obj_mag.mag_y*sin(roll)*sin(pitch) + obj_mag.mag_z*cos(roll)*sin(pitch);</span>
+<span class="lineNum">      15 </span><span class="lineCov">          8 :     y_val = obj_mag.mag_y * cos(roll) - obj_mag.mag_z * sin(roll);</span>
+<span class="lineNum">      16 </span><span class="lineCov">          8 :     yaw = 180 * atan2(-y_val,x_val)/PI;</span>
+<span class="lineNum">      17 </span><span class="lineCov">          8 :     std::cout&lt;&lt;&quot;==============================&quot;&lt;&lt;&quot;\n&quot;;</span>
+<span class="lineNum">      18 </span><span class="lineCov">          8 :     std::cout&lt;&lt;&quot;Printing Pitch Roll Yaw of below values&quot;&lt;&lt;&quot;\n&quot;;</span>
+<span class="lineNum">      19 </span><span class="lineCov">          8 :     obj_acc.print_raw();</span>
+<span class="lineNum">      20 </span><span class="lineCov">          8 :     obj_mag.print_raw();</span>
+<span class="lineNum">      21 </span><span class="lineCov">          8 :     std::cout&lt;&lt;&quot;Pitch  Roll  Yaw of above values&quot;&lt;&lt;&quot;\n&quot;;</span>
+<span class="lineNum">      22 </span><span class="lineCov">          8 :     std::cout&lt;&lt;pitch&lt;&lt;&quot; &quot;&lt;&lt;roll&lt;&lt;&quot; &quot;&lt;&lt;yaw&lt;&lt;&quot;\n&quot;;</span>
+<span class="lineNum">      23 </span><span class="lineCov">          8 :     std::cout&lt;&lt;&quot;==============================&quot;&lt;&lt;&quot;\n&quot;;  </span>
+<span class="lineNum">      24 </span><span class="lineCov">          8 :     orient.push_back(roll);</span>
+<span class="lineNum">      25 </span><span class="lineCov">          8 :     orient.push_back(pitch);</span>
+<span class="lineNum">      26 </span><span class="lineCov">          8 :     orient.push_back(yaw);</span>
+<a name="27"><span class="lineNum">      27 </span><span class="lineCov">          8 :     return orient;</span></a>
+<span class="lineNum">      28 </span>            : }
+<span class="lineNum">      29 </span><span class="lineCov">         24 : }</span>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.13</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>
