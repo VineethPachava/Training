@@ -1,10 +1,10 @@
-language: python
+language: python2
  python:  
-  - "3.6"  
+  - "2.7"  
 cache: pip  
 # command to install dependencies    
 before_script:  
   - easy_install distribute   
 # command to run tests    
 script:   
-  - python Mine.py  
+  - python Minesweep.py  
