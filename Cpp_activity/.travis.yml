@@ -7,4 +7,4 @@ before_script:
   - easy_install distribute   
 # command to run tests    
 script:   
-  - python Minesweeper.py  
+  - python Mine.py  
