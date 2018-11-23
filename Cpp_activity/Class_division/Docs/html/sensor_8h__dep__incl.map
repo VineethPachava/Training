@@ -1,0 +1,12 @@
+<map id="include/sensor.h" name="include/sensor.h">
+<area shape="rect" id="node2" href="$accelerometer_8h.html" title="include/accelerometer.h" alt="" coords="258,80,418,107"/>
+<area shape="rect" id="node3" href="$magnetometer_8h.html" title="include/magnetometer.h" alt="" coords="359,155,520,181"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="527,304,624,331"/>
+<area shape="rect" id="node9" href="$gps_8h.html" title="include/gps.h" alt="" coords="663,80,762,107"/>
+<area shape="rect" id="node11" href="$sensor_8cpp.html" title="src/sensor.cpp" alt="" coords="787,80,895,107"/>
+<area shape="rect" id="node4" href="$functions_8h.html" title="include/functions.h" alt="" coords="231,229,362,256"/>
+<area shape="rect" id="node8" href="$accelerometer_8cpp.html" title="src/accelerometer.cpp" alt="" coords="5,155,156,181"/>
+<area shape="rect" id="node7" href="$magnetometer_8cpp.html" title="src/magnetometer.cpp" alt="" coords="386,229,538,256"/>
+<area shape="rect" id="node5" href="$functions_8cpp.html" title="src/functions.cpp" alt="" coords="235,304,358,331"/>
+<area shape="rect" id="node10" href="$gps_8cpp.html" title="src/gps.cpp" alt="" coords="663,155,754,181"/>
+</map>

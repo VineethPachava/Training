@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_sensor.html" title="Sensor" alt="" coords="5,56,68,83"/>
+<area shape="rect" id="node2" href="$classsensor_1_1_accelerometer.html" title="sensor::Accelerometer" alt="" coords="116,5,269,32"/>
+<area shape="rect" id="node3" href="$classsensor_1_1_g_p_s.html" title="sensor::GPS" alt="" coords="144,56,241,83"/>
+<area shape="rect" id="node4" href="$classsensor_1_1_magnetometer.html" title="sensor::Magnetometer" alt="" coords="117,107,269,133"/>
+</map>

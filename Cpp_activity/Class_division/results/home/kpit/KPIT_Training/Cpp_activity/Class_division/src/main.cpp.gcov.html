@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - coverage.info - /home/kpit/KPIT_Training/Cpp_activity/Class_division/src/main.cpp</title>
+  <link rel="stylesheet" type="text/css" href="../../../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../../../index.html">top level</a> - <a href="index.html">home/kpit/KPIT_Training/Cpp_activity/Class_division/src</a> - main.cpp<span style="font-size: 80%;"> (source / <a href="main.cpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">coverage.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">51</td>
+            <td class="headerCovTableEntry">51</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2018-08-22 17:57:03</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr><td><img src="../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #include&lt;fstream&gt;</a>
+<span class="lineNum">       2 </span>            : #include&lt;iostream&gt;
+<span class="lineNum">       3 </span>            : #include &quot;include/sensor.h&quot;
+<span class="lineNum">       4 </span>            : #include &quot;include/accelerometer.h&quot;
+<span class="lineNum">       5 </span>            : #include &quot;include/magnetometer.h&quot;
+<span class="lineNum">       6 </span>            : #include &quot;include/functions.h&quot;
+<span class="lineNum">       7 </span>            : #include &quot;include/gps.h&quot;
+<span class="lineNum">       8 </span>            : #include &quot;include/json.hpp&quot;     
+<span class="lineNum">       9 </span>            : 
+<span class="lineNum">      10 </span>            : 
+<span class="lineNum">      11 </span>            : using nlohmann::json;
+<span class="lineNum">      12 </span>            : #define G 9.81
+<a name="13"><span class="lineNum">      13 </span>            : #define PI 3.14159265358979323846 </a>
+<span class="lineNum">      14 </span>            : 
+<span class="lineNum">      15 </span><span class="lineCov">          1 : int main(){</span>
+<span class="lineNum">      16 </span><span class="lineCov">          2 :     std::ifstream fin(&quot;sensor.json&quot;);</span>
+<span class="lineNum">      17 </span><span class="lineCov">          2 :     json j_complete = json::parse(fin);</span>
+<span class="lineNum">      18 </span><span class="lineCov">          2 :     auto entry = j_complete;</span>
+<span class="lineNum">      19 </span>            : 
+<span class="lineNum">      20 </span>            : /* Testing Sensor Class */
+<span class="lineNum">      21 </span><span class="lineCov">          1 :     std::cout&lt;&lt;&quot;Tesing the default constructors&quot;&lt;&lt;&quot;\n&quot;;</span>
+<span class="lineNum">      22 </span><span class="lineCov">          2 :     Sensor test_sensor(&quot;Testsensor&quot;);</span>
+<span class="lineNum">      23 </span><span class="lineCov">          1 :     test_sensor.print_raw();</span>
+<span class="lineNum">      24 </span><span class="lineCov">          1 :     std::cout&lt;&lt;&quot;===================================&quot;&lt;&lt;&quot;\n&quot;;</span>
+<span class="lineNum">      25 </span>            : /* Testing all the default constructors  */
+<span class="lineNum">      26 </span><span class="lineCov">          1 :     std::cout&lt;&lt;&quot;Tesing the default constructors&quot;&lt;&lt;&quot;\n&quot;;</span>
+<span class="lineNum">      27 </span><span class="lineCov">          2 :     Sensor def_obj_sen;</span>
+<span class="lineNum">      28 </span><span class="lineCov">          1 :     def_obj_sen.print_raw();</span>
+<span class="lineNum">      29 </span><span class="lineCov">          1 :     std::cout&lt;&lt;&quot;===================================&quot;&lt;&lt;&quot;\n&quot;;</span>
+<span class="lineNum">      30 </span><span class="lineCov">          2 :     sensor::Accelerometer def_obj_acc;</span>
+<span class="lineNum">      31 </span><span class="lineCov">          1 :     def_obj_acc.print_raw();</span>
+<span class="lineNum">      32 </span><span class="lineCov">          1 :     std::cout&lt;&lt;&quot;===================================&quot;&lt;&lt;&quot;\n&quot;;    </span>
+<span class="lineNum">      33 </span><span class="lineCov">          2 :     sensor::Magnetometer def_obj_mag;</span>
+<span class="lineNum">      34 </span><span class="lineCov">          1 :     def_obj_mag.print_raw();</span>
+<span class="lineNum">      35 </span><span class="lineCov">          1 :     std::cout&lt;&lt;&quot;===================================&quot;&lt;&lt;&quot;\n&quot;;</span>
+<span class="lineNum">      36 </span><span class="lineCov">          2 :     sensor::GPS def_obj_gps;</span>
+<span class="lineNum">      37 </span><span class="lineCov">          1 :     def_obj_gps.print_raw();</span>
+<span class="lineNum">      38 </span><span class="lineCov">          1 :     std::cout&lt;&lt;&quot;===================================&quot;&lt;&lt;&quot;\n&quot;;</span>
+<span class="lineNum">      39 </span>            : 
+<span class="lineNum">      40 </span>            : 
+<span class="lineNum">      41 </span>            : 
+<span class="lineNum">      42 </span>            : /* Creating a vector of smart pointers pointing to the objects of accelerometer and magnetometer */
+<span class="lineNum">      43 </span><span class="lineCov">          2 :     std::vector&lt;std::shared_ptr&lt;Sensor&gt;&gt; acc_ptr;</span>
+<span class="lineNum">      44 </span><span class="lineCov">          2 :     std::vector&lt;std::shared_ptr&lt;Sensor&gt;&gt; mag_ptr;</span>
+<span class="lineNum">      45 </span>            : 
+<span class="lineNum">      46 </span>            : /*  Creating vector of objects for gps pointer */
+<span class="lineNum">      47 </span><span class="lineCov">          2 :     std::vector&lt;sensor::GPS&gt; gps_ptr;  </span>
+<span class="lineNum">      48 </span>            : 
+<span class="lineNum">      49 </span>            :     
+<span class="lineNum">      50 </span>            : 
+<span class="lineNum">      51 </span><span class="lineCov">       3960 :     for(auto entry : j_complete){</span>
+<span class="lineNum">      52 </span><span class="lineCov">       3959 :         std::shared_ptr&lt;Sensor&gt; data_ptr_acc(new sensor::Accelerometer(entry[&quot;ACCELEROMETER_X&quot;].get&lt;double&gt;(),</span>
+<span class="lineNum">      53 </span><span class="lineCov">       3959 :                                      entry[&quot;ACCELEROMETER_Y&quot;].get&lt;double&gt;(),</span>
+<span class="lineNum">      54 </span><span class="lineCov">       7918 :                                      entry[&quot;ACCELEROMETER_Z&quot;].get&lt;double&gt;()));</span>
+<span class="lineNum">      55 </span><span class="lineCov">       3959 :         std::shared_ptr&lt;Sensor&gt; data_ptr_magnet(new sensor::Magnetometer(entry[&quot;MAGNETIC FIELD X (μT)&quot;].get&lt;double&gt;(),</span>
+<span class="lineNum">      56 </span><span class="lineCov">       3959 :                                      entry[&quot;MAGNETIC FIELD_Y&quot;].get&lt;double&gt;(),</span>
+<span class="lineNum">      57 </span><span class="lineCov">       7918 :                                      entry[&quot;MAGNETIC FIELD_Z&quot;].get&lt;double&gt;()));</span>
+<span class="lineNum">      58 </span>            : 
+<span class="lineNum">      59 </span><span class="lineCov">       3959 :         acc_ptr.push_back(data_ptr_acc);</span>
+<span class="lineNum">      60 </span><span class="lineCov">       3959 :         mag_ptr.push_back(data_ptr_magnet);</span>
+<span class="lineNum">      61 </span>            :     
+<span class="lineNum">      62 </span><span class="lineCov">       3959 :         gps_ptr.push_back(sensor::GPS(entry[&quot;LOCATION_Latitude&quot;].get&lt;std::string&gt;(),</span>
+<span class="lineNum">      63 </span><span class="lineCov">       7918 :                                      entry[&quot;LOCATION_Longitude&quot;].get&lt;std::string&gt;()));</span>
+<span class="lineNum">      64 </span>            : 
+<span class="lineNum">      65 </span>            :         }
+<span class="lineNum">      66 </span>            :         
+<span class="lineNum">      67 </span><span class="lineCov">          1 :         std::cout&lt;&lt;&quot;Printing first five acceleration data points&quot;&lt;&lt;&quot;\n&quot;;</span>
+<span class="lineNum">      68 </span><span class="lineCov">          6 :         for(int i=0; i&lt;5 ; i++){</span>
+<span class="lineNum">      69 </span><span class="lineCov">          5 :         ((acc_ptr.at(i))-&gt;print_raw());</span>
+<span class="lineNum">      70 </span>            :         }
+<span class="lineNum">      71 </span>            : 
+<span class="lineNum">      72 </span>            :         /* printing first five parsed logitude and latitude values */
+<span class="lineNum">      73 </span><span class="lineCov">          1 :         std::cout&lt;&lt;&quot;===================================&quot;&lt;&lt;&quot;\n&quot;;</span>
+<span class="lineNum">      74 </span><span class="lineCov">          1 :         std::cout&lt;&lt;&quot;Printing first five GPS data points&quot;&lt;&lt;&quot;\n&quot;;</span>
+<span class="lineNum">      75 </span><span class="lineCov">          6 :         for(int i=0; i&lt;5 ; i++){</span>
+<span class="lineNum">      76 </span><span class="lineCov">          5 :         ((gps_ptr.at(i)).print_raw());</span>
+<span class="lineNum">      77 </span>            :         }
+<span class="lineNum">      78 </span>            :         /* Calculating the roll pitch yaw */
+<span class="lineNum">      79 </span><span class="lineCov">          1 :          RollPitchYaw(static_cast&lt;sensor::Accelerometer&amp;&gt;(*(acc_ptr.at(4))),</span>
+<span class="lineNum">      80 </span><span class="lineCov">          1 :                                 static_cast&lt;sensor::Magnetometer&amp;&gt;(*(mag_ptr.at(4))));</span>
+<span class="lineNum">      81 </span>            : 
+<span class="lineNum">      82 </span>            :         /* Printing Linear velocity */
+<span class="lineNum">      83 </span>            :         // std::vector &lt;double&gt; l_acc = obj_acc.linear_acceleration(-45.12,19.72,10.76);
+<span class="lineNum">      84 </span>            :         // std::vector&lt;double&gt;::iterator iter;
+<span class="lineNum">      85 </span>            :         // for(iter=l_acc.begin();iter!=l_acc.end();++iter){
+<span class="lineNum">      86 </span>            :         //     std::cout &lt;&lt;*iter &lt;&lt; &quot;\n&quot;;
+<span class="lineNum">      87 </span>            :         // }
+<span class="lineNum">      88 </span>            : 
+<span class="lineNum">      89 </span>            :         /* Calculating the distance from the gps data */
+<span class="lineNum">      90 </span><span class="lineCov">          1 :         double x_distance = 0;</span>
+<span class="lineNum">      91 </span><span class="lineCov">       1980 :         for(auto it = gps_ptr.begin(); it!=gps_ptr.end()-1; ++it){</span>
+<span class="lineNum">      92 </span><span class="lineCov">       1979 :             double dx = 0 ;</span>
+<span class="lineNum">      93 </span><span class="lineCov">       1979 :             dx = *(++it)-*it;</span>
+<span class="lineNum">      94 </span><span class="lineCov">       1979 :             x_distance = x_distance + dx;</span>
+<span class="lineNum">      95 </span>            :         }
+<a name="96"><span class="lineNum">      96 </span><span class="lineCov">          1 :         std::cout&lt;&lt;&quot;Distance Moved :&quot;&lt;&lt;x_distance&lt;&lt;&quot;\n&quot;;</span></a>
+<span class="lineNum">      97 </span>            : 
+<span class="lineNum">      98 </span><span class="lineCov">          4 : }   </span>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.13</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>
